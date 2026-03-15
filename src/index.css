@@ -17,6 +17,10 @@ code {
     monospace;
 }
 
+:root {
+  color-scheme: light;
+}
+
 
 /* Hide scrollbar for Chrome, Safari, Edge */
 ::-webkit-scrollbar {

@@ -164,7 +164,6 @@ function Contribute({ language = "mr" }) {
                         placeholder={text.transaction}
                         value={formData.transactionID}
                         onChange={handleChange}
-                        required
                     />
 
                     <button type="submit">{text.button}</button>
