@@ -1,0 +1,86 @@
+.contact-section {
+  padding: 110px 30px 10px;
+  color: #000;
+}
+
+.contact-heading {
+  color: #1f9d8a;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.contact-left {
+  text-align: center;
+  position: relative; /* IMPORTANT for arrow positioning */
+}
+
+.contact-text {
+  font-size: 16px;
+  line-height: 1.7;
+  /* margin-bottom: 0px; */
+}
+
+/* Email & Mobile spacing */
+.contact-details {
+  margin-bottom: 30px; /* space for arrow */
+}
+
+.contact-btn {
+  margin-top: 10px;
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #f5a623;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* POINTER IMAGE */
+.contact-pointer {
+  position: absolute;
+  bottom: 2px;      /*aligns with contact details */
+  left: 60px;       /* slightly outside card */
+  width: 90px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* RIGHT SIDE */
+.contact-right iframe {
+  width: 100%;
+  height: 360px;
+  border-radius: 12px;
+  border: none;
+}
+
+.map-wrapper iframe {
+  filter: saturate(1.1) contrast(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-right iframe {
+    height: 300px;
+  }
+
+  /* Hide arrow on small screens */
+  .contact-pointer {
+    display: none;
+  }
+}

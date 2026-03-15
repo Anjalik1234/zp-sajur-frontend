@@ -1,0 +1,431 @@
+.infra-section {
+  padding: 60px 8%;
+  background: linear-gradient(
+  135deg,
+  #e8f6f3 0%,
+  #cfeee8 40%,
+  #fff3db 100%
+);
+  transition: 0.3s ease;
+}
+
+.blur-page {
+  filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+/* ================= SCHOOL TITLE ================= */
+
+.school-title {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+.school-title h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.school-title p {
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
+}
+
+/* ================= MAIN SCHOOL IMAGE ================= */
+
+.main-school {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.main-school img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 30px;
+  border: #0b3c09 solid 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= INFRA CONTAINER ================= */
+
+.infra-container {
+  width: 550px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  padding: 40px;
+  border: #1e3a5f solid 5px;
+  background: white;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+}
+
+.infra-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  margin-bottom: 80px;
+}
+
+/* ================= RIGHT SIDE REAL IMAGE ================= */
+
+.infra-illustration {
+  width: 370px;
+  height: 220px;
+  cursor: pointer;
+
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  /* background: #c507f0; */
+  padding: 8px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  /* transition: all 0.4s ease; */
+  margin-bottom: 0px;
+}
+
+/* Image Styling */
+.infra-illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+
+  /* transition: transform 0.5s ease; */
+}
+
+/* Hover Animation */
+.infra-illustration:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 50px 60px rgba(0, 0, 0, 0.25);
+}
+
+.infra-illustration:hover img {
+  transform: scale(1.08);
+}
+
+.left-shape {
+  border-top-left-radius: 250px;
+  border-bottom-left-radius: 250px;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+
+.right-shape {
+  border-top-right-radius: 250px;
+  border-bottom-right-radius: 250px;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+
+.infra-container:hover {
+  transform: translateY(-10px);
+}
+
+/* ALTERNATE LAYOUT */
+
+.left-layout {
+  flex-direction: row;
+}
+
+.right-layout {
+  flex-direction: row-reverse;
+}
+
+.infra-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ================= CONTENT ================= */
+
+.infra-content {
+  max-width: 60%;
+  padding: 0 40px;
+}
+
+.infra-content h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #1e3a5f;
+}
+
+.infra-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;                /* cleaner than top/left/width/height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+
+  z-index: 9999;
+}
+
+.modal-content {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.modal-content img {
+  display: block;          /* removes inline spacing issue */
+  max-width: 90%;
+  max-height: 85vh;
+
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+
+  animation: zoomIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: #ffffff;
+  color: #1e3a5f;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #1e3a5f;
+  color: white;
+  transform: scale(1.1);
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= LARGE LAPTOPS ================= */
+@media (max-width: 1400px) {
+
+  .infra-container{
+    width: 500px;
+    height: 280px;
+  }
+
+  .infra-illustration{
+    width: 340px;
+    height: 210px;
+  }
+
+}
+
+/* ================= LAPTOPS ================= */
+
+@media (max-width: 1200px){
+
+  .infra-row{
+    gap: 30px;
+  }
+
+  .infra-container{
+    width: 470px;
+    height: 260px;
+    padding: 35px;
+  }
+
+  .infra-content h2{
+    font-size: 24px;
+  }
+
+  .infra-content p{
+    font-size: 16px;
+  }
+
+  .infra-illustration{
+    width: 320px;
+    height: 200px;
+  }
+
+}
+
+
+/* ================= TABLETS ================= */
+
+@media (max-width: 992px){
+
+  .infra-row{
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .infra-container{
+    width: 90%;
+    max-width: 500px;
+    height: 240px;
+  }
+
+  .infra-illustration{
+    width: 90%;
+    max-width: 420px;
+    height: 230px;
+  }
+
+  .infra-content{
+    padding: 0 25px;
+  }
+
+}
+
+
+/* ================= SMALL TABLETS ================= */
+
+@media (max-width: 768px){
+
+  .infra-section{
+    padding: 50px 6%;
+  }
+
+  .infra-container{
+    width: 95%;
+    height: auto;
+    padding: 25px;
+  }
+
+  .infra-image{
+    width: 100px;
+    height: 100px;
+  }
+
+  .infra-content{
+    max-width: 65%;
+  }
+
+  .infra-content h2{
+    font-size: 20px;
+  }
+
+  .infra-content p{
+    font-size: 14px;
+  }
+
+  .infra-illustration{
+    height: 210px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 576px){
+
+  .school-title h1{
+    font-size: 26px;
+  }
+
+  .school-title p{
+    font-size: 14px;
+  }
+
+  .main-school img{
+    height: 220px;
+  }
+
+  .infra-container{
+    width: 80%;
+    padding: 20px;
+  }
+
+  .infra-image{
+    width: 85px;
+    height: 85px;
+  }
+
+  .infra-content{
+    padding: 0 15px;
+  }
+
+  .infra-content h2{
+    font-size: 18px;
+  }
+
+  .infra-content p{
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .infra-illustration{
+    width: 100%;
+    height: 200px;
+  }
+
+}
+
+
+/* ================= VERY SMALL DEVICES ================= */
+
+@media (max-width: 400px){
+
+  .infra-content h2{
+    font-size: 16px;
+  }
+
+  .infra-content p{
+    font-size: 12px;
+  }
+
+  .infra-image{
+    width: 70px;
+    height: 70px;
+  }
+
+  .infra-illustration{
+    height: 180px;
+  }
+
+}

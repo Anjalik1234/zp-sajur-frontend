@@ -1,0 +1,296 @@
+/* =========================
+   LST SECTION
+========================= */
+
+.lst-section {
+  padding-right:20px;
+  padding-left:20px;
+  padding-top: 90px;
+  margin-bottom: 130px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.lst-layout {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 200px;
+}
+
+
+
+
+/* Wrapper (if not already styled elsewhere) */
+.lst-card-wrapper {
+  position: relative;
+  width: 35%;
+  /* margin-top: 120px; */
+}
+
+/* Image sitting on the top edge of card */
+.lst-card-img {
+  position: absolute;
+  top: -150px;            /* pulls image outside card */
+  left: 23%;
+  transform: translateX(-50%);
+  width: 150px;
+  z-index: 5;
+}
+
+.lst-card-sci-img{
+  position: absolute;
+  top: -150px;            /* pulls image outside card */
+  left: 80%;
+  transform: translateX(-50%);
+  width: 150px;
+  z-index: 5;
+}
+
+.lst-card-butter1-img{
+  position: absolute;
+  top: -140px;            /* pulls image outside card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  z-index: 5;
+}
+
+/* Extra space inside card so content doesn't clash */
+/* .lst-card {
+  padding-top: 70px;
+} */
+
+
+
+.lst-card {
+  width: 90%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  margin-left: 40px;
+  border-right: 8px solid #1f5f4a;
+  border-bottom: 8px solid #1f5f4a;
+}
+
+/* Gradient corner border */
+.lst-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 160px;
+  height: 160px;
+
+
+  background-size: 8px 100%, 100% 8px; /* thick at corner */
+  background-position: top right, top right;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+}
+
+
+.lst-card h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #1f5f4a;
+}
+
+.lst-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* =========================
+   RIGHT BOOK SECTION
+========================= */
+
+.books-container{
+  width:50%;
+  height: 180px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  /* margin-top: 0px; */
+}
+
+.extra-study-btn{
+  padding:12px 26px;
+  font-size:18px;
+  font-weight:600;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#1f5f4a,#2f8f6f);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.extra-study-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.books-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.book{
+  width:110px;
+  text-align:center;
+  cursor:pointer;
+  transition:transform 0.3s ease;
+}
+
+.book img{
+  width:100%;
+}
+
+.book span{
+  display:block;
+  margin-top:2px;
+  font-size:18px;
+  font-weight:700;
+  color:#011710;
+}
+
+.book:hover{
+  transform:scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .lst-layout {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+  }
+
+  .lst-card-wrapper {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    
+  }
+
+  .lst-card {
+    margin-left: 0;
+  }
+
+  .lst-card-img {
+  position: absolute;
+  top: -150px;            /* pulls image outside card */
+  left: 20%;
+  transform: translateX(-50%);
+  width: 150px;
+  z-index: 5;
+}
+
+.lst-card-sci-img{
+  position: absolute;
+  top: -150px;            /* pulls image outside card */
+  left: 80%;
+  transform: translateX(-50%);
+  width: 150px;
+  z-index: 5;
+}
+
+.lst-card-butter1-img{
+  position: absolute;
+  top: -140px;            /* pulls image outside card */
+  left: 48%;
+  transform: translateX(-50%);
+  width: 150px;
+  z-index: 5;
+}
+
+ .books-container{
+    width:100%;
+    margin-top:60px;
+  }
+
+  .books-row{
+    gap:30px;
+  }
+
+  .book{
+    width:95px;
+  }
+
+
+}
+@media (max-width:600px){
+
+  .books-row{
+    gap:20px;
+  }
+
+  .book{
+    width:80px;
+  }
+
+  .book span{
+    font-size:15px;
+  }
+
+  .extra-study-btn{
+    font-size:16px;
+    padding:10px 20px;
+  }
+
+}
+
+
+@media (max-width:393px){
+
+  .lst-layout{
+    margin-top: 80px;   /* reduce big gap */
+    gap: 30px;
+  }
+
+  .lst-card-wrapper {
+    width: 100%;
+    max-width: 340px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .lst-card{
+    width: 100%;
+    margin-left: 0;
+    padding: 25px;
+    margin-bottom: 30px;
+  }
+
+  .lst-card-img,
+  .lst-card-sci-img,
+  .lst-card-butter1-img{
+    width: 110px;
+    top: -110px;
+  }
+
+  .books-container{
+    width: 100%;
+    gap: 30px;
+  }
+
+}

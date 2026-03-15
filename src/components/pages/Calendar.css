@@ -1,0 +1,271 @@
+.calendar-section {
+  padding: 130px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-compact-wrapper {
+  width: 100%;
+  max-width: 1150px;
+  background: white;
+  padding: 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.mini-title {
+  color: #1e7f6d;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #fbb017;
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/* GRID BALANCE */
+.calendar-main-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
+  gap: 18px;
+}
+
+.mini-panel {
+  padding: 12px;
+  border-radius: 12px;
+  background: #f9fbfb;
+  border: 1px solid #e0ecea;
+}
+
+.mini-panel h4 {
+  font-size: 0.95rem;
+  color: #1e7f6d;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.surya{
+  margin-top: 0.75rem;
+}
+
+/* LEFT */
+.panchang-row {
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mini-quote {
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 1px dashed #ccc;
+  font-size: 0.95rem;
+}
+
+.mini-dinvishesh {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px dashed #ccc;
+}
+
+.neutral-text {
+  font-style: italic;
+  color: #9aa3a3;
+  font-size: 0.95rem;
+}
+
+
+.din-item {
+  font-size: 0.95rem;
+  color: #1e7f6d;
+  font-weight: 500;
+}
+
+/* CENTER */
+.chalkboard-compact {
+  background: #2d5a52 !important;
+  color: white;
+  border: 6px solid #a67c52 !important;
+  padding: 16px !important;
+}
+
+.cal-top {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #fbb017;
+  margin-bottom: 30px;
+}
+
+.mini-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.mini-cell {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+
+.mini-cell.active {
+  background: #fbb017;
+  color: black;
+  font-weight: bold;
+}
+
+.mini-cell.event {
+  border-bottom: 2px solid #fbb017;
+}
+
+/* RIGHT */
+.bday-container {
+  margin-top: 10px;
+  overflow-y: auto;
+  max-height: 260px;   /* Adjust height as needed */
+  padding-right: 6px;
+}
+
+.mini-panel.side {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbar (optional but nice) */
+.bday-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.bday-container::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 10px;
+}
+
+.mini-bday-card {
+  background: white;
+  border: 1px solid #e0ecea;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.mini-bday-card:hover {
+  transform: translateY(-3px);
+}
+
+.mini-bday-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.mini-bday-card h6 {
+  font-size: 0.95rem;
+  margin: 6px 0 4px;
+  color: #1e7f6d;
+}
+
+.mini-bday-card small {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .calendar-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+
+  padding: 4px 8px;
+  margin: 0 6px;
+
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  transform: scale(1.05);
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}
+
+/* Make cell relative for tooltip */
+.mini-cell {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Yellow holiday style */
+.mini-cell.holiday-cell {
+  font-weight: 600;
+}
+
+/* Tooltip hidden by default */
+.holiday-tooltip {
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: #1e7f6d;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+  z-index: 10;
+}
+
+/* Show on hover */
+.mini-cell:hover .holiday-tooltip {
+  opacity: 1;
+}
+
+/* Small arrow */
+.holiday-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1e7f6d transparent transparent transparent;
+}

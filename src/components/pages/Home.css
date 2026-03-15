@@ -1,0 +1,210 @@
+/* =======================
+   Carousel Container
+======================= */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 82vh;
+  min-height: 320px;
+  max-height: 600px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* =======================
+   Slide Wrapper
+======================= */
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* =======================
+   Image / Video
+======================= */
+.carousel-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* keep image bright like reference */
+  filter: brightness(0.95) contrast(1.1);
+}
+
+/* =======================
+   Gradient Overlay (KEY PART)
+======================= */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  /* dark on left, bright on right */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.55) 30%,
+    rgba(0, 0, 0, 0.25) 55%,
+    rgba(0, 0, 0, 0.05) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* =======================
+   Text Content (LEFT aligned)
+======================= */
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #fff;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.carousel-content h1 {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.9);
+}
+
+/* Top small welcome text */
+.carousel-top-text {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Contact button */
+.carousel-btn {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #f5a623; /* blue like reference */
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #f7c44a;
+  transform: translateY(-2px);
+}
+
+
+.carousel-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.9;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.8);
+}
+
+/* =======================
+   Navigation Arrows
+======================= */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 3;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.55);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* =======================
+   Fade Animation
+======================= */
+.fade {
+  animation: fadeEffect 1.3s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =======================
+   Tablet
+======================= */
+@media (max-width: 768px) {
+  .carousel {
+    height: 48vh;
+    width: 100%
+  }
+
+  .carousel-content {
+    left: 6%;
+    max-width: 90%;
+  }
+
+  .carousel-content h1 {
+    font-size: 34px;
+  }
+
+  .carousel-content p {
+    font-size: 15px;
+  }
+}
+
+/* =======================
+   Mobile
+======================= */
+@media (max-width: 480px) {
+  .carousel {
+    height: 42vh;
+    width: 100%
+  }
+
+  .carousel-content {
+    left: 5%;
+  }
+
+  .carousel-content h1 {
+    font-size: 26px;
+  }
+
+  .carousel-content p {
+    font-size: 14px;
+  }
+
+  .arrow {
+    font-size: 22px;
+    padding: 8px 10px;
+  }
+}

@@ -1,0 +1,37 @@
+[
+  { "month": 1, "day": 26, "mr": "प्रजासत्ताक दिन", "en": "Republic Day" },
+
+  { "month": 2, "day": 19, "mr": "छत्रपती शिवाजी महाराज जयंती", "en": "Chhatrapati Shivaji Maharaj Jayanti" },
+  { "month": 2, "day": 23, "mr": "महाशिवरात्री", "en": "Maha Shivaratri" },
+  { "month": 2, "day": 26, "mr": "रमझान ईद (ईद-उल-फितर)", "en": "Idul Fitr" },
+
+  { "month": 3, "day": 11, "mr": "होळी", "en": "Holi" },
+  { "month": 3, "day": 27, "mr": "गुढीपाडवा", "en": "Gudi Padwa" },
+
+  { "month": 4, "day": 3, "mr": "राम नवमी", "en": "Ram Navami" },
+  { "month": 4, "day": 7, "mr": "महावीर जयंती", "en": "Mahavir Jayanti" },
+  { "month": 4, "day": 14, "mr": "गुड फ्रायडे", "en": "Good Friday" },
+  { "month": 4, "day": 14, "mr": "डॉ. बाबासाहेब आंबेडकर जयंती", "en": "Dr Ambedkar Jayanti" },
+
+  { "month": 5, "day": 1, "mr": "महाराष्ट्र दिन", "en": "Maharashtra Day" },
+  { "month": 5, "day": 5, "mr": "बकरी ईद (ईद-उल-अजहा)", "en": "Bakrid / Eid al Adha" },
+  { "month": 5, "day": 8, "mr": "बुद्ध पौर्णिमा", "en": "Buddha Purnima" },
+
+  { "month": 6, "day": 4, "mr": "मुहर्रम", "en": "Muharram" },
+
+  { "month": 8, "day": 3, "mr": "ईद-ए-मिलाद", "en": "Eid e Milad" },
+  { "month": 8, "day": 15, "mr": "स्वातंत्र्य दिन", "en": "Independence Day" },
+  { "month": 8, "day": 16, "mr": "पारशी नववर्ष", "en": "Parsi New Year" },
+
+  { "month": 8, "day": 23, "mr": "गणेश चतुर्थी", "en": "Ganesh Chaturthi" },
+
+  { "month": 9, "day": 28, "mr": "विजयादशमी", "en": "Vijaya Dashami" },
+
+  { "month": 10, "day": 2, "mr": "गांधी जयंती", "en": "Gandhi Jayanti" },
+  { "month": 10, "day": 17, "mr": "दिवाळी", "en": "Diwali" },
+  { "month": 10, "day": 17, "mr": "दिवाळी सुट्टी", "en": "Deepavali Holiday" },
+
+  { "month": 11, "day": 2, "mr": "गुरुनानक जयंती", "en": "Guru Nanak Jayanti" },
+
+  { "month": 12, "day": 25, "mr": "नाताळ", "en": "Christmas Day" }
+]

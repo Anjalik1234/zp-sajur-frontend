@@ -1,0 +1,233 @@
+/* =========================
+   SECTION
+========================= */
+
+.sixth-section{
+padding:clamp(40px,6vw,80px) 8%;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+ margin-top: -70px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.sixth-title{
+text-align:center;
+font-size:clamp(24px,3vw,34px);
+color:#1e7f6f;
+font-weight:700;
+}
+
+/* =========================
+   SUBJECT BOARD
+========================= */
+
+.subjects-board{
+
+background:linear-gradient(
+135deg,
+#1e7f6d,
+#2c8c80
+);
+
+border:clamp(6px,1vw,10px) solid #f5a623;
+
+border-radius:25px;
+
+width:70%;
+max-width:1000px;
+
+margin:clamp(40px,6vw,70px) auto;
+
+padding:clamp(20px,4vw,45px);
+
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+
+/* NEW */
+max-height:450px;
+overflow-y:scroll;
+}
+
+/* Scrollbar styling */
+
+.subjects-board::-webkit-scrollbar {
+  width: 8px;
+}
+
+.subjects-board::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+.subjects-board::-webkit-scrollbar-thumb {
+  background: #423f39;
+  border-radius: 10px;
+}
+
+.subjects-board::-webkit-scrollbar-thumb:hover {
+  background: #2f2d28;
+}
+
+/* =========================
+   GRID (AUTO RESPONSIVE)
+========================= */
+
+.subjects-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+gap:clamp(18px,3vw,30px);
+
+}
+
+/* =========================
+   SUBJECT CARD
+========================= */
+
+.subject-card{
+
+height:clamp(130px,18vw,170px);
+
+border-radius:18px;
+
+display:flex;
+flex-direction:column;
+
+align-items:center;
+justify-content:center;
+
+text-decoration:none;
+
+color:white;
+
+font-size:clamp(16px,2vw,20px);
+
+font-weight:600;
+
+cursor:pointer;
+
+border-right:5px solid black;
+border-bottom:5px solid black;
+
+transition:0.35s;
+
+box-shadow:0 10px 22px rgba(0,0,0,0.2);
+margin: auto;
+
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.subject-card:hover{
+
+transform:translateY(-8px) scale(1.05);
+
+box-shadow:0 18px 35px rgba(0,0,0,0.35);
+
+}
+
+/* =========================
+   ICON
+========================= */
+
+.icon{
+
+font-size:clamp(28px,3vw,42px);
+
+margin-bottom:10px;
+
+}
+
+/* =========================
+   SUBJECT COLORS
+========================= */
+
+.marathi{
+background:linear-gradient(135deg,#ff9966,#e67b7d);
+}
+
+.english{
+background:linear-gradient(135deg,#36d1dc,#5b86e5);
+}
+
+.hindi{
+background:linear-gradient(135deg,#f7971e,#ffd200);
+}
+
+.maths{
+background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+
+.science{
+background:linear-gradient(135deg,#8e2de2,#9a72ec);
+}
+
+.history{
+background:linear-gradient(135deg,#ff758c,#f2a6c6);
+}
+
+.geography{
+background:linear-gradient(135deg,#00c9a7,#a892fe);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+.subjects-grid{
+grid-template-columns:1fr;
+}
+
+.sixth-title{
+font-size:24px;
+margin-top:90px;
+}
+
+.subject-card{
+height:160px;
+width:200px;
+}
+
+.subjects-board{
+    width: 70%;
+    /* height: 600px; */
+}
+
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+.subjects-grid{
+grid-template-columns:1fr;
+}
+
+.sixth-title{
+font-size:24px;
+margin-top:90px;
+}
+
+.subject-card{
+height:160px;
+width:100%;
+}
+
+.subjects-board{
+    width: 100%;
+    /* height: 600px; */
+}
+}

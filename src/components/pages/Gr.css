@@ -1,0 +1,160 @@
+/* ===== SECTION ===== */
+.gr-section {
+  padding: 60px 30px 40px;
+  min-height: 100vh;
+}
+
+/* ===== HERO ===== */
+.gr-hero {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.gr-hero h1 {
+  color: #1f9d8a;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 60px;
+}
+
+/* ===== CONTROLS ===== */
+.gr-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.gr-search,
+.gr-select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  min-width: 180px;
+}
+
+.gr-search:focus,
+.gr-select:focus {
+  outline: none;
+  border-color: #1f9d8a;
+}
+
+/* ===== TABLE WRAPPER ===== */
+.gr-table-wrapper {
+  overflow-x: auto;
+}
+
+/* ===== TABLE ===== */
+.gr-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  font-size: 13px; /* 🔥 smaller text */
+}
+
+/* ===== TABLE HEADER ===== */
+.gr-table th {
+  background-color: #1f9d8a;
+  color: white;
+  padding: 8px 10px;  /* 🔥 reduced height */
+  text-align: left;
+  font-weight: 600;
+}
+
+/* ===== TABLE BODY ===== */
+.gr-table td {
+  padding: 8px 10px;  /* 🔥 reduced height */
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+/* Hover effect */
+.gr-table tr:hover {
+  background-color: #f5fbfa;
+}
+
+/* ===== TITLE COLUMN (Compact & Controlled Width) ===== */
+.gr-table td:nth-child(2) {
+  max-width: 450px;
+  line-height: 1.4;
+}
+
+/* ===== REFERENCE + DATE + SIZE CENTER ALIGN ===== */
+.gr-table td:nth-child(1),
+.gr-table td:nth-child(3),
+.gr-table td:nth-child(4),
+.gr-table td:nth-child(5) {
+  white-space: nowrap;
+}
+
+/* ===== DOWNLOAD LINK ===== */
+.gr-table a {
+  text-decoration: none;
+  color: #1f9d8a;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.gr-table a:hover {
+  text-decoration: underline;
+}
+
+/* ===== NO DATA ===== */
+.no-data {
+  text-align: center;
+  padding: 15px;
+  color: #777;
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination button {
+  padding: 6px 14px;
+  border: none;
+  background-color: #1f9d8a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.pagination button:hover {
+  background-color: #178a78;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .gr-table {
+    font-size: 12px;
+  }
+
+  .gr-table th,
+  .gr-table td {
+    padding: 6px 8px;
+  }
+
+  .gr-search,
+  .gr-select {
+    width: 100%;
+  }
+
+  .gr-table td:nth-child(2) {
+    max-width: 300px;
+  }
+}

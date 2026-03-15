@@ -1,0 +1,210 @@
+.about-section {
+  position: relative; /* NEW */
+  padding: 90px 90px 30px;
+  overflow: hidden;   /* optional but recommended */
+}
+
+
+/* Heading */
+.about-heading {
+  display: inline-block;
+  padding: 0px 15px;
+  margin-left: 40%;
+  /* margin-right: auto; */
+
+  font-size: 30px;
+  color: #1e7f6d;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+
+}
+
+
+
+.about-left{
+    background-color: #1e7f6d;
+    width: 600px;
+    height: 350px;
+    padding: 10px 30px 30px;
+    border-radius: 20px;
+    border: 8px solid #f5a623;
+    position: relative;
+    margin-top: -13px;
+}
+
+/* Two Column Layout */
+.about-two-column {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* LEFT */
+.about-intro {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #f3eded;
+    margin-bottom: 20px;
+    /* font-weight: bold; */
+}
+
+.about-points {
+    list-style: none;
+    padding: 0;
+}
+
+.about-points li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 13px;
+    color: #f3eded;
+    margin-bottom: 14px;
+    /* font-weight: bold; */
+}
+
+.tick {
+    color: #f3eded;
+    font-weight: bold;
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.about-card-girl {
+  position: absolute;
+  top: -75px;
+  left: 0px;
+
+  width: 75px;
+  height: auto;
+
+  transition: transform 0.4s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+
+
+.about-card-bulb{
+    width: 100px;
+
+  position: absolute;
+  bottom: 20px;   /* distance from bottom of board */
+  right: 25px;    /* distance from right edge */
+
+  opacity: 0.95;
+  filter: drop-shadow(0 6px 14px rgba(255, 214, 102, 0.6));
+    
+}
+
+/* RIGHT - Location */
+.about-card-wrapper{
+    position: relative;
+    width: 80%;
+    margin-left: 70px;
+}
+
+.about-card-img{
+  position: absolute;
+  top: -110px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 110px;
+
+  transition: transform 0.4s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.about-card-floral{
+    position: absolute;
+  top: -50px;
+  left: 36%;
+  width: 155px;
+  transition: transform 0.4s ease;
+  pointer-events: none;
+}
+
+
+.location-box {
+    background: linear-gradient(135deg, #fffaf0, wheat);
+    color: #1e7f6d;
+    padding: 10px 5px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-bottom: 6px solid #1e7f6d;
+    border-right: 6px solid #1e7f6d;
+    transition: transform 0.3s ease;
+    /* margin-left: 40px; */
+}
+
+
+.location-box h3 {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.location-box h1 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.location-box p {
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 70px 40px 30px;
+  }
+
+  .about-heading {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .about-two-column {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-left {
+    width: 87%;
+    height: auto;
+    margin: auto;
+  }
+
+  .about-card-wrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 393px)
+{
+  .about-left{
+    margin: auto;
+    margin-top: 20px;
+    height: 600px;
+  }
+
+  .about-card-wrapper{
+    margin: auto;
+    margin-top: 90px;
+  }
+
+}

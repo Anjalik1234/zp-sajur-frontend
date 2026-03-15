@@ -1,0 +1,180 @@
+/* =========================
+SECTION
+========================= */
+
+.seventh-section{
+padding:clamp(40px,6vw,80px) 8%;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+ margin-top: -70px;
+}
+
+/* =========================
+TITLE
+========================= */
+
+.seventh-title{
+text-align:center;
+font-size:clamp(24px,3vw,34px);
+color:#1e7f6f;
+font-weight:700;
+}
+
+/* =========================
+BOARD
+========================= */
+
+.subjects-board{
+background:linear-gradient(135deg,#1e7f6d,#2c8c80);
+border:clamp(6px,1vw,10px) solid #f5a623;
+border-radius:25px;
+width:70%;
+max-width:1000px;
+margin:auto;
+padding:clamp(20px,4vw,45px);
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* =========================
+GRID
+========================= */
+
+.subjects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:clamp(18px,3vw,30px);
+}
+
+/* =========================
+CARD
+========================= */
+
+.subject-card{
+height:clamp(130px,18vw,170px);
+border-radius:18px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:white;
+font-size:clamp(16px,2vw,20px);
+font-weight:600;
+cursor:pointer;
+border-right:5px solid black;
+border-bottom:5px solid black;
+transition:0.35s;
+box-shadow:0 10px 22px rgba(0,0,0,0.2);
+margin:auto;
+}
+
+/* =========================
+HOVER
+========================= */
+
+.subject-card:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 18px 35px rgba(0,0,0,0.35);
+}
+
+/* =========================
+ICON
+========================= */
+
+.icon{
+font-size:clamp(28px,3vw,42px);
+margin-bottom:10px;
+}
+
+/* =========================
+NEW COLORS (Different from 6th)
+========================= */
+
+/* =========================
+SUBJECT COLORS (7th STD)
+========================= */
+
+/* =========================
+   SUBJECT COLORS (7th ONLY)
+========================= */
+
+.seventh-section .marathi{
+background:linear-gradient(135deg,#ff7e5f,#feb47b);
+}
+
+.seventh-section .english{
+background:linear-gradient(135deg,#43cea2,#185a9d);
+}
+
+.seventh-section .hindi{
+background:linear-gradient(135deg,#ffb347,#ffcc33);
+}
+
+.seventh-section .maths{
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.seventh-section .science{
+background:linear-gradient(135deg,#a18cd1,#fbc2eb);
+}
+
+.seventh-section .history{
+background:linear-gradient(135deg,#f7971e,#ffd200);
+}
+
+.seventh-section .geography{
+background:linear-gradient(135deg,#56ab2f,#a8e063);
+}
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:900px){
+
+.subjects-grid{
+grid-template-columns:1fr;
+}
+
+.seventh-title{
+font-size:24px;
+margin-top:90px;
+}
+
+.subject-card{
+height:160px;
+width:220px;
+}
+
+.subjects-board{
+width:70%;
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:480px){
+
+.subjects-grid{
+grid-template-columns:1fr;
+}
+
+.seventh-title{
+font-size:24px;
+margin-top:90px;
+}
+
+.subject-card{
+height:160px;
+width:220px;
+}
+
+.subjects-board{
+width:100%;
+}
+
+}

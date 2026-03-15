@@ -1,0 +1,384 @@
+.joy-gallery {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.joy-title {
+  font-size: 2.5rem;
+  color: #1f9d8a;
+  margin-top: 60px;
+
+}
+
+.joy-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 55px;
+}
+
+/* Horizontal Cards */
+.joy-row {
+  display: flex;
+  gap: 30px;
+}
+
+/* Card */
+.joy-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 45px 30px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+.joy-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;   /* affects top edge length */
+  height: 50%;  /* affects left edge length */
+  pointer-events: none;
+
+  /* Draw L-shape with gradient tapering to edges */
+  background: linear-gradient(
+      to bottom, 
+      rgba(0,0,0,0.6), 
+      rgba(0,0,0,0) 100%
+    ) left,
+    linear-gradient(
+      to right, 
+      rgba(0,0,0,0.6), 
+      rgba(0,0,0,0) 100%
+    ) top;
+  background-repeat: no-repeat;
+  background-size: 6px 100%, 100% 6px; /* thickness of border */
+}
+
+
+.joy-card:hover {
+  transform: translateY(-12px);
+}
+
+/* Badge Icon */
+.joy-badge {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
+
+/* Text */
+.joy-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.joy-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.joy-card button {
+  padding: 11px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.joy-card button {
+  padding: 11px 26px;
+  min-width: 140px; /* optional, prevents wrapping for long text */
+  border-radius: 30px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/* Individual Themes */
+
+/* Infrastructure */
+.infra .joy-badge {
+  background: linear-gradient(135deg, #1f9d8a, #6be3cf);
+}
+
+.infra::before {
+  background: linear-gradient(to bottom, #1f9d8a, rgba(31,157,138,0)) left,
+              linear-gradient(to right, #1f9d8a, rgba(31,157,138,0)) top;
+  background-repeat: no-repeat;
+  background-size: 8px 100%, 100% 8px; /* thick L-shape at corner, tapers to edges */
+  border-radius: 20px;
+}
+
+
+.infra button {
+  background: #1f9d8a;
+  color: #fff;
+}
+
+/* YouTube */
+.youtube .joy-badge {
+  background: linear-gradient(135deg, #ff3b3b, #ff7b7b);
+}
+
+.youtube::before {
+  background: linear-gradient(to bottom, #ff3b3b, rgba(255,59,59,0)) left,
+              linear-gradient(to right, #ff3b3b, rgba(255,59,59,0)) top;
+  background-repeat: no-repeat;
+  background-size: 8px 100%, 100% 8px;
+  border-radius: 20px;
+}
+
+
+.youtube button {
+  background: #ff3b3b;
+  color: #fff;
+}
+
+/* Activities */
+.activities .joy-badge {
+  background: linear-gradient(135deg, #f5a623, #ffd37a);
+}
+
+
+.activities::before {
+  background: linear-gradient(to bottom, #f5a623, rgba(245,166,35,0)) left,
+              linear-gradient(to right, #f5a623, rgba(245,166,35,0)) top;
+  background-repeat: no-repeat;
+  background-size: 8px 100%, 100% 8px;
+  border-radius: 20px;
+}
+
+.activities button {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* Fun Decorative Dots */
+/* .joy-card::after {
+  content: "";
+  position: absolute;
+  bottom: 18px;
+  right: 22px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #dc05e7 20%, transparent 20%);
+  background-size: 10px 10px;
+  opacity: 0.3;
+} */
+
+/* Responsive */
+@media (max-width: 900px) {
+  .joy-row {
+    flex-direction: column;
+  }
+}
+
+/* ===== Infrastructure Card Emerging Icons (LEFT) ===== */
+
+.infra {
+  position: relative;
+  overflow: visible;
+}
+
+.infra-emerge {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.infra-icon {
+  position: absolute;
+  font-size: 85px;
+  opacity: 0.22;
+  filter: drop-shadow(0 10px 12px rgba(0,0,0,0.15));
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.infra-icon.school {
+  top: -80px;
+  left: 10px;
+  transform: rotate(-15deg);
+  color: brown;
+}
+
+.infra-icon.board {
+  top: 15px;
+  left: 25px;
+  font-size: 70px;
+  transform: rotate(12deg);
+  color: black;
+}
+
+.infra-icon.tree {
+  top: 100px;
+  left: 20px;
+  font-size: 75px;
+  transform: rotate(-10deg);
+  color: darkgreen;
+}
+
+.infra:hover .infra-icon {
+  transform: translateX(-10px) scale(1.1);
+  opacity: 0.7;
+}
+
+
+/* ===== Activities Card Emerging Effect ===== */
+
+.activities {
+  position: relative;
+  overflow: visible; /* allow icons to escape card */
+}
+
+/* Icon container */
+.activity-emerge {
+  position: absolute;
+  right: -55px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Common icon style */
+.emerge-icon {
+  position: absolute;
+  font-size: 85px;
+  /* color: #8c09e4; */
+  opacity: 0.45;
+  filter: drop-shadow(0 10px 12px rgba(0,0,0,0.15));
+  transition: transform 0.5s ease, opacity 0.4s ease;
+}
+
+/* Individual placements */
+.emerge-icon.brush {
+  top: -90px;
+  right: 10px;
+  transform: rotate(-25deg);
+  color: #c43bff;
+}
+
+.emerge-icon.leaf {
+  top: -5px;
+  right: 25px;
+  font-size: 70px;
+  transform: rotate(18deg);
+  color: green;
+}
+
+.emerge-icon.star {
+  top: 72px;
+  right: 20px;
+  font-size: 75px;
+  transform: rotate(-12deg);
+  color: #f5a623;
+}
+
+.emerge-icon.theater_masks
+{
+  top: -165px;
+  right: 20px;
+  font-size: 75px;
+  transform: rotate(0);
+  color: #06b9f5;
+}
+
+/* Hover effect */
+.activities:hover .emerge-icon {
+  transform: translateX(10px) scale(1.1);
+  opacity: 0.8;
+}
+
+.joy-card {
+  position: relative;
+  overflow: visible;
+  padding-top: 70px; /* space for top image */
+}
+
+/* 🌟 Top emerging school image */
+.infra-top-img {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+
+/* Activities top image */
+.activities-top-img {
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 155px;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+/* 🔥 Increase image opacity on card hover */
+
+/* Infrastructure image hover */
+.infra:hover .infra-top-img {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.05);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Activities image hover */
+.activities:hover .activities-top-img {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.05 );
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+@media (max-width: 1024px) {
+  .joy-card{
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    width: 300px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .joy-card{
+    margin: 80px 15px 30px 30px;  
+    width: 70%;
+    margin-left: 70px;
+  }
+
+}
+
+@media (max-width: 393px)
+{
+  /* iphone view */
+  .joy-card{
+    margin: auto;
+    margin-top: 100px;
+  }
+}
