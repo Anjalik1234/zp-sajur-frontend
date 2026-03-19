@@ -90,7 +90,7 @@ const Footer = ({ language = "mr" }) => {
 
           <div className="footer-contact">
             <FaPhone />
-            <span>26310205509</span>
+            <span>9881182914</span>
           </div>
         </div>
       </div>
