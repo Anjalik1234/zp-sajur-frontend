@@ -40,15 +40,6 @@ const Teachers = ({ language = "mr" }) => {
 
   return (
     <section className="teachers-section" id="teachers">
-      <h2 className="teachers-title">
-        👩‍🏫 {language === "mr" ? "आमचे शिक्षक" : "Our Teachers"}
-      </h2>
-
-      <p className="teachers-subtitle">
-        {language === "mr"
-          ? "विद्यार्थ्यांच्या उज्ज्वल भविष्यासाठी समर्पित मार्गदर्शक"
-          : "Dedicated mentors shaping students’ bright future"}
-      </p>
 
       {/* 🔹 Special Members Section */}
       <div className="special-members">
@@ -67,6 +58,16 @@ const Teachers = ({ language = "mr" }) => {
           </div>
         ))}
       </div>
+
+      <h2 className="teachers-title">
+        👩‍🏫 {language === "mr" ? "आमचे शिक्षक" : "Our Teachers"}
+      </h2>
+
+      <p className="teachers-subtitle">
+        {language === "mr"
+          ? "विद्यार्थ्यांच्या उज्ज्वल भविष्यासाठी समर्पित मार्गदर्शक"
+          : "Dedicated mentors shaping students’ bright future"}
+      </p>
 
       {/* 🔹 Teachers Section */}
       <div className="teachers-container">

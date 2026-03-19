@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 import SplashScreen from "./components/pages/SplashScreen";
 import Navbar from "./components/Navbar";
 import PencilBar from "./components/PencilBar";
@@ -34,35 +35,35 @@ function App() {
   const [language, setLanguage] = useState("en");
   const [showSplash, setShowSplash] = useState(true);
 
+  const navigate = useNavigate(); 
   const location = useLocation();
 
   useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollTo) {
+      const id = location.state.scrollTo;
 
-  if (location.pathname === "/" && location.state?.scrollTo) {
+      const scrollToElement = () => {
+        const section = document.getElementById(id);
 
-    const id = location.state.scrollTo;
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
 
-    const timer = setTimeout(() => {
+          // ✅ Clear state after scrolling (IMPORTANT)
+          navigate(location.pathname, { replace: true, state: {} });
+        } else {
+          // Retry until element is available
+          setTimeout(scrollToElement, 100);
+        }
+      };
 
-      const section = document.getElementById(id);
+      scrollToElement();
+    }
+  }, [location, navigate]);
 
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-
-    }, 200);
-
-    return () => clearTimeout(timer);
-
-  }
-
-}, [location]);
-
-  // Load saved language
   useEffect(() => {
-    const savedLang = localStorage.getItem("siteLanguage");
-    if (savedLang) setLanguage(savedLang);
-  }, []);
+  const savedLang = localStorage.getItem("siteLanguage");
+  if (savedLang) setLanguage(savedLang);
+}, []);
 
   // Change language
   const changeLanguage = (lang) => {

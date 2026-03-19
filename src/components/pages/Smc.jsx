@@ -70,12 +70,12 @@ const smcMembers = [
   {
     name: { mr: "कु. श्रीरंग प्रकाश चव्हाण", en: "Mr. Shrirang Prakash Chavan" },
     post: { mr: "सदस्य", en: "Member" },
-    type: { mr: "विद्यार्थी", en: "Student" }
+    type: { mr: "विद्यार्थी प्रतिनिधी", en: "Student" }
   },
   {
     name: { mr: "कु. पंकजा जयवंत पाटील", en: "Miss Pankaja Jaywant Patil" },
     post: { mr: "सदस्य", en: "Member" },
-    type: { mr: "उपस्थिती", en: "Invitee" }
+    type: { mr: "विद्यार्थी प्रतिनिधी", en: "Invitee" }
   },
   {
     name: { mr: "श्री. संतोषकुमार लक्ष्मण कांबळे", en: "Mr. Santoshkumar Laxman Kamble" },

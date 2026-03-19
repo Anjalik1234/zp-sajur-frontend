@@ -367,9 +367,9 @@
 
 @media (max-width: 600px) {
   .joy-card{
-    margin: 80px 15px 30px 30px;  
+    /* margin: 80px 25px 30px 30px;   */
     width: 70%;
-    margin-left: 70px;
+    margin-left: 40px;
   }
 
 }
