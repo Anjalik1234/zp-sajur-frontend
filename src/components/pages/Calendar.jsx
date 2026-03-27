@@ -155,7 +155,7 @@ export default function Calendar({ language = "mr" }) {
           <div className="mini-panel chalkboard-compact">
 
             <div className="cal-top">
-              <button onClick={goPrevMonth} className="nav-btn">◀</button>
+              <button onClick={goPrevMonth} className="nav-btn">◀️</button>
 
               <strong>
                 {new Date(currentYear, currentMonth).toLocaleString(
@@ -164,7 +164,7 @@ export default function Calendar({ language = "mr" }) {
                 )}
               </strong>
 
-              <button onClick={goNextMonth} className="nav-btn">▶</button>
+              <button onClick={goNextMonth} className="nav-btn">▶️</button>
             </div>
 
             <div className="mini-weekdays">
@@ -216,7 +216,7 @@ export default function Calendar({ language = "mr" }) {
           {/* RIGHT PANEL */}
           <div className="mini-panel side">
 
-            <h4>🎂 {lang === "mr" ? "वाढदिवस" : "Birthdays"}</h4>
+            <span className="birthday-text">🎂 {lang === "mr" ? "वाढदिवसाच्या हार्दिक शुभेच्छा !!" : "Happy Birthday !!"}</span>
 
             <div className="bday-container">
               {birthdays.length === 0 ? (
@@ -227,20 +227,40 @@ export default function Calendar({ language = "mr" }) {
                 </p>
               ) : (
                 birthdays.map((b, i) => (
-                  <div key={i} className="mini-bday-card">
+                  <div key={i} className="mini-bday-card flower-card">
+
+                    {/* Top-right flower */}
                     <img
-                      src={b.img || "/default-student.png"}
-                      alt={b.name}
-                      onError={(e) => {
-                        e.target.src = "/default-student.png";
-                      }}
+                      src="/bday-flower.png"
+                      alt="flower decoration"
+                      className="flower-img top-right"
                     />
-                    <h6>{b.name}</h6>
-                    <small>
-                      {lang === "mr"
-                        ? `इयत्ता : ${toMarathiNumber(b.std)}`
-                        : `Std: ${b.std}`}
-                    </small>
+
+                    <div className="bday-content">
+                      <img
+                        src={b.img || "/default-student.png"}
+                        alt={b.name}
+                        onError={(e) => {
+                          e.target.src = "/default-student.png";
+                        }}
+                      />
+
+                      <h6>{b.name}</h6>
+
+                      <small>
+                        {lang === "mr"
+                          ? `इयत्ता : ${toMarathiNumber(b.std)}`
+                          : `Std: ${b.std}`}
+                      </small>
+                    </div>
+
+                    {/* Bottom-left flower */}
+                    <img
+                      src="/bday-flower.png"
+                      alt="flower decoration"
+                      className="flower-img bottom-left"
+                    />
+
                   </div>
                 ))
               )}
