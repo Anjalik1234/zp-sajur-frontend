@@ -155,7 +155,7 @@ export default function Calendar({ language = "mr" }) {
           <div className="mini-panel chalkboard-compact">
 
             <div className="cal-top">
-              <button onClick={goPrevMonth} className="nav-btn">◀️</button>
+              <button onClick={goPrevMonth} className="nav-btn">◀</button>
 
               <strong>
                 {new Date(currentYear, currentMonth).toLocaleString(
@@ -164,7 +164,7 @@ export default function Calendar({ language = "mr" }) {
                 )}
               </strong>
 
-              <button onClick={goNextMonth} className="nav-btn">▶️</button>
+              <button onClick={goNextMonth} className="nav-btn">▶</button>
             </div>
 
             <div className="mini-weekdays">
@@ -215,21 +215,28 @@ export default function Calendar({ language = "mr" }) {
 
           {/* RIGHT PANEL */}
           <div className="mini-panel side">
-
-            <span className="birthday-text">🎂 {lang === "mr" ? "वाढदिवसाच्या हार्दिक शुभेच्छा !!" : "Happy Birthday !!"}</span>
-
             <div className="bday-container">
               {birthdays.length === 0 ? (
-                <p className="small-text">
-                  {lang === "mr"
-                    ? "आज कोणाचाही वाढदिवस नाही"
-                    : "No birthdays today"}
-                </p>
+                <div className="mini-bday-card flower-card">
+
+                  {/* Heading like Happy Birthday */}
+                  <span className="birthday-text">
+                    🎂 {lang === "mr" ? "वाढदिवस" : "Birthdays"}
+                  </span>
+
+                  <p className="small-text">
+                    {lang === "mr"
+                      ? "आज कोणाचाही वाढदिवस नाही"
+                      : "No birthdays today"}
+                  </p>
+
+                </div>
               ) : (
                 birthdays.map((b, i) => (
                   <div key={i} className="mini-bday-card flower-card">
 
                     {/* Top-right flower */}
+                    <span className="birthday-text">🎂 {lang === "mr" ? "वाढदिवसाच्या हार्दिक शुभेच्छा !!" : "Happy Birthday !!"}</span>
                     <img
                       src="/bday-flower.png"
                       alt="flower decoration"
