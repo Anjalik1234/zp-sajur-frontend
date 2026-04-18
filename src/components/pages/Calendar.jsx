@@ -42,7 +42,7 @@ export default function Calendar({ language = "mr" }) {
   useEffect(() => {
     const fetchBirthdays = async () => {
       try {
-        const res = await fetch("https://zpsajur-backend.onrender.com/api/students/today-birthday");
+        const res = await fetch("https://zpsajur-backend-production.up.railway.app/api/students/today-birthday");
         const data = await res.json();
         setBirthdays(data);
       } catch (err) {
