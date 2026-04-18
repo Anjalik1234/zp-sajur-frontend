@@ -42,7 +42,7 @@ const Footer = ({ language = "mr" }) => {
 
   // Simple Local Visitor Counter
   useEffect(() => {
-    fetch("https://zpsajur-backend.onrender.com/api/visit")
+    fetch("zpsajur-backend-production.up.railway.app/api/visit")
       .then((res) => res.json())
       .then((data) => setVisits(data.count))
       .catch((err) => console.log(err));
