@@ -70,7 +70,7 @@ function Contribute({ language = "mr" }) {
 
         try {
             const response = await fetch(
-                "https://zpsajur-backend.onrender.com/api/contributions/add",
+                "zpsajur-backend-production.up.railway.app/api/contributions/add",
                 {
                     method: "POST",
                     headers: {
@@ -106,7 +106,7 @@ function Contribute({ language = "mr" }) {
 
     const fetchQR = async () => {
 
-        const response = await fetch("https://zpsajur-backend.onrender.com/api/qr");
+        const response = await fetch("zpsajur-backend-production.up.railway.app/api/qr");
 
         const data = await response.json();
 
