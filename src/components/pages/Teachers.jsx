@@ -12,7 +12,7 @@ const Teachers = ({ language = "mr" }) => {
 
       try {
 
-        const response = await fetch("https://zpsajur-backend.onrender.com/api/teachers");
+        const response = await fetch("https://zpsajur-backend-production.up.railway.app/api/teachers");
 
         const data = await response.json();
 
