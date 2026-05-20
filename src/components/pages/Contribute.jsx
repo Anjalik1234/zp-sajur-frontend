@@ -70,7 +70,7 @@ function Contribute({ language = "mr" }) {
 
         try {
             const response = await fetch(
-                "https://zpsajur-backend-production.up.railway.app/api/contributions/add",
+                "https://zpsajur-backend.onrender.com/api/contributions/add",
                 {
                     method: "POST",
                     headers: {
